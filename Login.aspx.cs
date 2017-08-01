@@ -24,27 +24,6 @@ public partial class Login : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-       /* SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connect"].ToString());
-        con.Open();
-        string query = "select * from levelinfinite where name='"+ TextBox1.Text + "'and pass='"+TextBox2.Text+"'";
-
-        SqlCommand cmd = new SqlCommand(query,con);
-        string output = cmd.ExecuteScalar().ToString();
-
-        Session["user"] = TextBox1.Text;
-        Session["pass"] = TextBox2.Text;
-
-        //if (output == "1")
-        if (TextBox1.Text == "@name" && TextBox2.Text == "@pass")
-        {
-           
-            Response.Redirect("Dashboard.aspx");
-        }
-        else
-        {
-            Label3.Text = "Login Unsuccessful....!";
-        }
-        */
 
         cmd.CommandText="select * from levelinfinite where name='"+ TextBox1.Text + "'and pass='"+TextBox2.Text+"'";
         cmd.Connection = con;
